@@ -4,14 +4,14 @@
     "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj": {
+    "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\korkm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\obj\\",
+        "outputPath": "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\korkm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj"
+              "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj"
               }
             }
           }

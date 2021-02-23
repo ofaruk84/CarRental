@@ -6207,8 +6207,8 @@
     },
     "Core/1.0.0": {
       "type": "project",
-      "path": "../../FinalProject/Core/Core.csproj",
-      "msbuildProject": "../../FinalProject/Core/Core.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6244,8 +6244,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\FinalProject\\Core\\Core.csproj"
+            "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\korkm\\Documents\\C# Projects\\ReCapProject\\Core\\Core.csproj"
             }
           }
         }
