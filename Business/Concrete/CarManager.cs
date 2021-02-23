@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,35 +19,48 @@ namespace Business.Concrete
 
         }
 
-        public IResult Add(Car car)
+
+        public IDataResult<List<Car>> GetAll()
         {
-            if(car.Description.Length<2)
+            throw new NotImplementedException();
+        }
+
+        public IDataResult<Car> Get()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IResult Add(Car entity)
+        {
+            if (entity.CarName.Length < 2)
             {
-                return new ErrorResult("Car Description is too short");
+                return new ErrorResult("Car Name is too short");
             }
 
-            if (car.DailyPrice <= 0)
+            if (entity.DailyPrice <= 0)
             {
                 return new ErrorResult("Daily Price can not be 0");
             }
 
-            _carDal.Add(car);
+            _carDal.Add(entity);
 
             return new SuccessResult("Car Added");
 
-            
-
-            
         }
 
-        public IDataResult<Car> Delete(Car car)
+        public IResult Update(Car entity)
         {
-            _carDal.Delete(car);
-
-            return new SuccessDataResult<Car>();
+          _carDal.Update(entity);
+          return new SuccessResult("Updated");
         }
 
-        public IDataResult<List<Car>> GetAll()
+        public IResult Delete(Car entity)
+        {
+           _carDal.Delete(entity);
+           return new SuccessResult("Deleted");
+        }
+
+        public IDataResult<List<Car>> GetByColorID()
         {
             throw new NotImplementedException();
         }
@@ -56,14 +70,9 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<Car>> GetByColorID()
+        public IDataResult<List<CarDetailDto>> GetCarsDetails()
         {
-            throw new NotImplementedException();
-        }
-
-        public IDataResult<Car> GetByID()
-        {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetailDtos());
         }
     }
 }

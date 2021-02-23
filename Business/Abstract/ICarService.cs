@@ -1,21 +1,19 @@
-﻿using Core.Utilities.Results;
+﻿using Core.Business;
+using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Abstract
 {
-   public interface ICarService
+   public interface ICarService : IServiceRepository<Car>
     {
-        IDataResult<List<Car>> GetAll();
-        IDataResult<Car> GetByID();
+
         IDataResult<List<Car>> GetByColorID();
         IDataResult<List<Car>> GetByBrandID();
-        IResult Add(Car car);
-        IDataResult<Car> Delete(Car car);
-        
-
+        IDataResult<List<CarDetailDto>> GetCarsDetails();
 
     }
 }
