@@ -29,7 +29,7 @@ namespace Business.Concrete
             return new SuccessResult("Deleted");
         }
 
-        public IDataResult<User> Get()
+        public IDataResult<User> GetById(int id)
         {
             return new SuccessDataResult<User>(_userDal.Get());
         }

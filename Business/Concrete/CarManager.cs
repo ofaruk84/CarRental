@@ -6,6 +6,8 @@ using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac;
 
 namespace Business.Concrete
 {
@@ -16,31 +18,24 @@ namespace Business.Concrete
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-
+            
         }
 
 
         public IDataResult<List<Car>> GetAll()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
 
-        public IDataResult<Car> Get()
+        public IDataResult<Car> GetById(int id)
         {
             throw new NotImplementedException();
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car entity)
         {
-            if (entity.CarName.Length < 2)
-            {
-                return new ErrorResult("Car Name is too short");
-            }
 
-            if (entity.DailyPrice <= 0)
-            {
-                return new ErrorResult("Daily Price can not be 0");
-            }
 
             _carDal.Add(entity);
 
@@ -60,12 +55,12 @@ namespace Business.Concrete
            return new SuccessResult("Deleted");
         }
 
-        public IDataResult<List<Car>> GetByColorID()
+        public IDataResult<List<Car>> GetByColorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IDataResult<List<Car>> GetByBrandID()
+        public IDataResult<List<Car>> GetByBrandId(int id)
         {
             throw new NotImplementedException();
         }
